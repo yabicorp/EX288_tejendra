@@ -15,7 +15,7 @@ RUN   yum install -y --disableplugin=subscription-manager httpd && \
       #echo "Hello from the httpd-parent container!" > ${DOCROOT}/index.html
 
 # Allows child images
-EXPOSE 80
+EXPOSE 8081
 
 ONBUILD COPY ./src/ /var/www/html
 # This stuff is needed to ensure a clean start
